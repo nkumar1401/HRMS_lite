@@ -22,35 +22,25 @@ A production-ready, lightweight HR Management System built with Django 6.0 and M
 ## 📁 Project Structure
 
 ```
-HRMS_lite/
+HRMS_lite_project/             # Git Root
 ├── HRMS/                      # Main application
 │   ├── static/
-│   │   ├── css/main.css       # All styles
-│   │   └── js/main.js         # JavaScript
-│   ├── admin.py               # Admin configuration
-│   ├── forms.py               # Form classes with validation
-│   ├── models.py              # Employee & Attendance models
-│   ├── urls.py                # App URL routing
-│   └── views.py               # Class-based views
+│   │   ├── css/main.css
+│   │   └── js/main.js
+│   ├── admin.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── urls.py
+│   └── views.py
 ├── HRMS_lite/                 # Project settings
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
 ├── templates/                 # HTML templates
-│   ├── base.html
-│   ├── dashboard.html
-│   ├── employees/
-│   │   ├── employee_list.html
-│   │   ├── employee_form.html
-│   │   └── employee_confirm_delete.html
-│   └── attendance/
-│       ├── attendance_list.html
-│       ├── attendance_form.html
-│       └── employee_attendance.html
 ├── .env                       # Environment variables
-├── manage.py
-├── requirements.txt
-├── Procfile                   # Heroku/Render deployment
+├── manage.py                  # Django entry point
+├── requirements.txt           # Listed dependencies
+├── Procfile                   # Render/Railway deployment
 └── README.md
 ```
 
