@@ -5,10 +5,12 @@
 Django>=5.0,<7.0
 
 # Database
-mysqlclient>=2.2.0
+# mysqlclient>=2.2.0  # Optional for local MySQL
+psycopg2-binary>=2.9.9
 
 # Configuration Management
 python-decouple>=3.8
+dj-database-url>=2.1.0
 
 # Production Server
 gunicorn>=21.2.0
