@@ -74,10 +74,10 @@ WSGI_APPLICATION = 'HRMS_lite.wsgi.application'
 import dj_database_url
 
 DATABASES = {
-    'default': config(
-        'DATABASE_URL',
-        default=f"postgresql://{config('DB_USER', default='postgres')}:{config('DB_PASSWORD', default='')}@{config('DB_HOST', default='localhost')}:{config('DB_PORT', default='5432')}/{config('DB_NAME', default='HRMS_lite')}",
-        cast=dj_database_url.parse
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL', default=f"postgresql://{config('DB_USER', default='postgres')}:{config('DB_PASSWORD', default='')}@{config('DB_HOST', default='localhost')}:{config('DB_PORT', default='5432')}/{config('DB_NAME', default='HRMS_lite')}"),
+        conn_max_age=600,
+        conn_health_checks=True,
     )
 }
 
